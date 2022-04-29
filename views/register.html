@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto personal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <section class="header-box">
+
+            <div class="logo">
+                <img src="/img/logo.png" alt="logo">
+            </div>
+
+            <nav>
+                <ul>    
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/productDetail">Productos</a></li>
+                    <li><a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </nav>
+            <div class="menu-burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </section>
+
+    </header>
+
+    <main>
+        <section class="register-form">
+
+            <form action="/" method="POST">
+
+                <label class="label" for="Datos-usuario">Datos Usuario</label>
+
+                <input type="text" name="name" required placeholder="Nombre">
+                <input class="right-apellido" type="text" name="name" required placeholder="Apellido">
+                <input type="number" name="Documento" required placeholder="Documento">
+
+                <input type="number" name="telephone" required placeholder="Telefono">
+                <input class="right-email" type="email" name="email" required placeholder="Email">
+                <br>
+
+                <label for="Datos-envio">Datos de Envío</label>
+
+                <input type="texto" name="Calle" required placeholder="Calle">
+                <input type="number" name="adress" required placeholder="Numero">
+                <input type="number" name="Piso" placeholder="Piso">
+                <input type="texto" name="Depto" placeholder="Depto">
+                <input type="texto" name="Postal" required placeholder="Codigo Postal">
+                <input type="texto" name="Ciudad" required placeholder="Ciudad">
+                <input type="texto" name="Provincia" required placeholder="Provincia">
+
+              <br>     
+                <button class="bottom-register" type="submit">Crear Usuario</button>
+
+        </section>    
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

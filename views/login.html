@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto personal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <section class="header-box">
+
+            <div class="logo">
+                <img src="/img/logo.png" alt="logo">
+            </div>
+
+            <nav>
+                <ul>    
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/productDetail">Productos</a></li>
+                    <li><a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </nav>
+            <div class="menu-burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </section>
+
+    </header>
+
+    <main>
+        <section class="login-form">
+
+            <h2>Login</h2>
+
+            <form action="/" method="POST">
+ 
+                <input type="text" name="user" name="email" required placeholder="USUARIO / EMAIL">
+                <input type="password" pattern=".{6,}" name="password" required placeholder="PASS / CLAVE ">
+                <button class="bottom-login" type="submit">INGRESAR</button>  
+            
+                <a href="#">¿Perdiste tu contraseña?</a>
+                <a href="/register">¿No tienes cuenta?, Registrate</a>
+            </form>
+        </section>     
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
