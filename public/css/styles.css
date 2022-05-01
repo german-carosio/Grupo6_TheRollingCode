@@ -122,6 +122,7 @@ main {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 .main-section2 article {
@@ -138,7 +139,8 @@ main {
     margin-right: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    
 }
 
 .main-section3 article {
@@ -146,6 +148,7 @@ main {
     margin: 5px;
     padding: 20px;
     text-align: center;
+    
 }
 
 
@@ -154,6 +157,10 @@ main {
 @media (min-width: 768px) {
     .main-section3{
         flex-direction: row;
+    }
+
+    .main-section3 article {
+        width: 50%;
     }
 }
 
