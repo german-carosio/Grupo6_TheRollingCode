@@ -110,7 +110,7 @@ main {
 }
 
 .main-section article {
-    border: solid var(--lila) 2px;
+    
     display: flex;
     flex-direction: column;
 }
