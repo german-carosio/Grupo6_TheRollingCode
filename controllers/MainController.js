@@ -4,21 +4,22 @@ const path = require("path");
 //crear objeto MainController
 let MainController = {
     //crear un metodo (req, res) para todos los "/..." 
-    index: function (req,res) {
+    index: (req,res) => {
         //responder con un archivo que es una vista
-        res.sendFile(path.join(__dirname,"../views/index.html"));
+        //usando ejs en vez de html
+         res.render("index");
     },
-    login:function (req,res) {
-        res.sendFile(path.join(__dirname,"../views/login.html"));
+    login: (req,res) => {
+         res.render("login");
     },
-    register:function (req,res) {
-        res.sendFile(path.join(__dirname,"../views/register.html"));
+    register: (req,res) => {
+         res.render("register");
     },
-    productDetail:function (req,res) {
-        res.sendFile(path.join(__dirname,"../views/productDetail.html"));
+    productDetail: (req,res) => {
+         res.render("productDetail");
     },
-    productCart:function (req,res) {
-        res.sendFile(path.join(__dirname,"../views/productCart.html"));
+    productCart: (req,res) => {
+         res.render("productCart");
     }
 }
 

@@ -110,12 +110,11 @@ main {
 }
 
 .main-section article {
-    
     display: flex;
     flex-direction: column;
 }
 
-.main-section2 {
+.main-section2 {    
     margin-top: 10px;
     border: solid var(--lila) 2px;
     text-align: center;

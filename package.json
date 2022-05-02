@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/german-carosio/Grupo6_TheRollingCode#readme",
   "dependencies": {
+    "ejs": "^3.1.7",
     "express": "^4.18.1",
     "nodemon": "^2.0.16"
   },
