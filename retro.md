@@ -1,0 +1,8 @@
+## Retropesctiva Sprint 3
+Primeramente debimos modificar nuestra metodología de trabajo, asumiendo mayores responsabilidades cada uno de los intengrantes del equipo. Migramos los contenidos a un nuevo repositorio y nos enfocamos en temrinar lo que quedaba por ajustar del Sprint 2 y a avanzar con el Sprint actual lo más rápidamente posible. Dividimos las tareas y hablamos a diario para realizar los ajustes necesarios. Estamos enfocados nuevamente y, tras haber modificado nuestro work flow, pudimos entregar en tiempo y forma. 
+
+## Retropesctiva Sprint 2
+Dividimos la tareas tal como hicimos durante el Sprint 1. Trabajamos bien y coordinadamente hasta los últimos días, en los cuales sufrimos la baja de uno de los integrantes del equipo: Giselle Mosqueira. Con la salida de Giselle se descuadraron las 2 vistas y debimos reconstruir esa parte del proyecto, viéndonos forzados a entregar dos días más tarde de la fecha estipulada. Nos reorganizamos rápida y ágilmente, y ya pensamos un nuevo método de comunicación diario y más aceitado entre los integrantes que quedamos en el equipo. 
+
+## Retrospectiva Sprint 1
+Dividimos las tareas de forma equitativa pero nos faltó esfuerzo y compromiso para cumplir con los plazos de entrega. Podemos organizarnos bien para trabajar y abordamos los contenidos de manera integral en el equipo. Continuaremos ajustando en cuanto a la dedicación horaria, pero el balance del primer sprint es positivo.

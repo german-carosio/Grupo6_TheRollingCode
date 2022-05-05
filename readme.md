@@ -30,8 +30,10 @@ Público / Target : Fanáticos de los videojuegos, una audiencia  compuesta casi
 
 
 ## Nuestro repo
-https://github.com/peronacha/Grupo6_TheRollingCode
+https://github.com/german-carosio/Grupo6_TheRollingCode.git
 
+## Nuestro Tablero
+https://trello.com/b/NYczpZsO/rolling-code
 
 ## Retrospectiva Sprint 1
 Dividimos las tareas de forma equitativa pero nos faltó esfuerzo y compromiso para cumplir con los plazos de entrega. Podemos organizarnos bien para trabajar y abordamos los contenidos de manera integral en el equipo. Continuaremos ajustando en cuanto a la dedicación horaria, pero el balance del primer sprint es positivo.
