@@ -94,6 +94,34 @@
 /*------------------------*/
 
 /*PRODUCT DETAIL*/
+.detail-main {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.detail-main div {
+    text-align: center;
+}
+.detail-main img {
+    width: 80%;
+}
+
+@media (min-width: 576px) {
+    .detail-main img {
+        width: 65%;
+    }
+@media (min-width: 768px) {
+    .detail-main img {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .detail-main img {
+        width: 45%;
+    }
+}
+/*PRODUCT LIST*/
 
 .products-main {
     display: flex;

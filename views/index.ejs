@@ -45,9 +45,9 @@
 
         <section class="main-section3">
             
-            <% producto.forEach(element => { %>
+            <% productos.forEach(element => { %>
             <article>
-                <a href="/productDetail">
+                <a href="/productDetail/<%= element.id %> ">
                     <img src="/img/<%=element.img%>.jpg " alt="">
                     <h3><%= element.nombre %> </h3>
                 </a>
