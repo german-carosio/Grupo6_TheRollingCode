@@ -1,13 +1,14 @@
-// llamar a path
-const path = require("path");
+const fs = require('fs')
 
-//crear objeto MainController
+// Traemos el archivo que contiene nuestra data a mostrar desde un json
+
+const productos = JSON.parse(fs.readFileSync('./productos.json'))
+
+
 let MainController = {
-    //crear un metodo (req, res) para todos los "/..." 
+   
     index: (req,res) => {
-        //responder con un archivo que es una vista
-        //usando ejs en vez de html
-         res.render("index");
+         res.render("index",{producto: productos});
     },
     login: (req,res) => {
          res.render("login");
@@ -16,12 +17,15 @@ let MainController = {
          res.render("register");
     },
     productDetail: (req,res) => {
+         //let productoId = res.params.id
+         
          res.render("productDetail");
     },
     productCart: (req,res) => {
          res.render("productCart");
     }
 }
+
 
 
 //exportar el controlador
