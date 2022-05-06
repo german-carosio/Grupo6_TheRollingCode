@@ -23,7 +23,7 @@ let MainController = {
          const producto = productos.find(element =>{
               return element.id === req.params.id
          })
-         console.log("resultado", producto);
+         //console.log("resultado", producto);
          res.render("productDetail",{producto: producto});
     },
     productCart: (req,res) => {

@@ -1,15 +1,5 @@
-:root {
-    --amarillo: rgb(254, 204, 0);
-    --lila: rgb(211, 79, 253);
-    --verde: rgb(30, 253, 64);
-}
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 1em;
-}
+
+
 /*INDEX*/
 
 .main-section article img {
@@ -110,6 +100,7 @@
     .detail-main img {
         width: 65%;
     }
+
 @media (min-width: 768px) {
     .detail-main img {
         width: 50%;
@@ -121,6 +112,8 @@
         width: 45%;
     }
 }
+
+/*--------------------------------*/
 /*PRODUCT LIST*/
 
 .products-main {
@@ -409,4 +402,5 @@
     .productosRecomendados_imagenes img {
         width: 15vw;
     }
+}
 }
