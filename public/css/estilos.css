@@ -1,5 +1,4 @@
 
-
 /*INDEX*/
 
 .main-section article img {
@@ -22,17 +21,29 @@
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    
     justify-content: center;
 }
 
 .main-section2 article div {
     padding: 5px;
-    width: 80%;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-section2 article div i {
+    display: flex;
+    flex-direction: row;
     font-size: 2rem;
+    width: 30%;
+    align-items: center;
+}
+
+.main-section2 article div p {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    width: 30%;
+    align-items: center;
 }
 
 .main-section3 {
@@ -49,9 +60,14 @@
 }
 
 .main-section3 article a {
-    
     text-decoration: none;
 
+}
+
+.main-section3 article p {
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .main-section3 article img {
