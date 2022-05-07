@@ -11,19 +11,28 @@
 
 
     <main>
-        <section class="products-main">
-           
+        <!--Nav de categorias-->
+        <%- include("./partials/nav-categorias")  %> 
+        
+        <section class="productList">
+
+            <h2>Lista de productos</h2>
+
             <% productos.forEach(element => { %>
              
-                <article class="product">
+                <article class="productList__product">
                     
                     <a href="/productDetail/<%= element.id %> ">
                         <img src="/img/<%= element.img  %>.jpg" alt="">
+                    </a> 
+                    <a href="/productDetail/<%= element.id %> ">
+                        <h3><%= element.marca  %> </h3>
+                        <p><%= element.modelo  %></p>
                     </a>
-                    <h3><%= element.nombre  %> </h3>
+                   
                     <p><%= element.precio  %> </p>
 
-                    <div class="product__basics">
+                    <div>
                         <button class="buttom-carrito" type="submit">AGREGAR AL CARRITO</button>
                         <button class="buttom-carrito" type="submit">COMPRAR</button>   
                     </div>
