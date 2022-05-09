@@ -3,7 +3,7 @@ const fs = require('fs');
 const productos = JSON.parse(fs.readFileSync('./productos.json'))
 
 //categorias
-const categorias = ["Headset", "Mouse", "Teclado"];
+const categorias = ["headset", "mouse", "teclado"];
 
 let MainController = {
    
