@@ -8,7 +8,7 @@ Público / Target : Fanáticos de los videojuegos, una audiencia  compuesta casi
 
 
 ## Nuestro arte visual
-<img src="/public/img/pcgamer.jpg"/>
+<img src="/public/img/bannerHome.jpg"/>
 
 
 ## Nuestros productos
@@ -35,14 +35,7 @@ https://github.com/german-carosio/Grupo6_TheRollingCode.git
 ## Nuestro Tablero
 https://trello.com/b/NYczpZsO/rolling-code
 
-## Retrospectiva Sprint 1
-Dividimos las tareas de forma equitativa pero nos faltó esfuerzo y compromiso para cumplir con los plazos de entrega. Podemos organizarnos bien para trabajar y abordamos los contenidos de manera integral en el equipo. Continuaremos ajustando en cuanto a la dedicación horaria, pero el balance del primer sprint es positivo.
-
-
 ## Autores
-Gise Mosqueira
-Licenciada y Profesora en Ciencias de la Educación de la UBA. Muy fan de la programación, la educación a distancia y las herramientas digitales. Actualmente trabaja en Digital House como Diseñadora de contenidos y recursos educativos para el equipo de escuelas
-
 Germán Carosio
 Trabaja en Claro Argentina y su objetivo primordial es formar parte de un grupo de trabajo donde pueda seguir desarrollando sus aptitudes. Actualmente está estudiando programación en Digital House, demostrando sus aptitudes y su talento acumulado hasta el momento.
 
