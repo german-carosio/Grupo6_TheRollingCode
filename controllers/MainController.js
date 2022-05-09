@@ -3,9 +3,7 @@ const fs = require('fs');
 const productos = JSON.parse(fs.readFileSync('./productos.json'))
 
 //categorias
-const headset = "headset"
-const mouse = "mouse"
-const teclado = "teclado"
+const categorias = ["Headset", "Mouse", "Teclado"];
 
 let MainController = {
    
@@ -22,7 +20,7 @@ let MainController = {
     },
 
     productList: (req,res) => {
-     res.render("productList",{productos: productos, headset : headset, mouse : mouse, teclado : teclado});
+     res.render("productList",{productos: productos, categorias: categorias});
      },
 
     productDetail: (req,res) => {
@@ -41,7 +39,7 @@ let MainController = {
      const categoria = productos.filter(element =>{
           return element.categoria === req.params.categoria
      })
-         res.render("categorias",{categoria:categoria, headset:headset, mouse:mouse, teclado:teclado});
+         res.render("categorias",{categoria:categoria,categorias: categorias});
     },
 
     administrador:(req,res) => {
