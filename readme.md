@@ -3,15 +3,15 @@ Se trata de un Marketplace, que tiene como objetivo la venta de auriculares para
 Público / Target : Fanáticos de los videojuegos, una audiencia  compuesta casi por completo por miembros de la generación Z. Este será nuestro target primario, aunque en los últimos años, el universo del público abocado a los videojuegos se ubica entre los 15 y 35 años.
 
 
-## Nuestra imagen
+## Nuestra Imagen
 <img src="/public/img/logo.png"/>
 
 
-## Nuestro arte visual
+## Nuestro Arte Visual
 <img src="/public/img/bannerHome.jpg"/>
 
 
-## Nuestros productos
+## Nuestros Productos
 <img src="/public/img/auri2.jpg"/>
 
 
@@ -29,7 +29,7 @@ Público / Target : Fanáticos de los videojuegos, una audiencia  compuesta casi
 4-https://compragamer.com/?seccion=3&cate=8&nro_max=50&gclid=CjwKCAjwiuuRBhBvEiwAFXKaNOhpAM65ZEL_H6ZC1lsx7VU2RStGzEsLDvSQgtOEQzJZznBPCFPqcBoCth0QAvD_BwE
 
 
-## Nuestro repo
+## Nuestro Repo
 https://github.com/german-carosio/Grupo6_TheRollingCode.git
 
 ## Nuestro Tablero

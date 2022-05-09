@@ -48,7 +48,6 @@
     width: 60%;
 }
 
-
 .main-section3 article p {
     text-decoration: none;
     font-weight: bold;
@@ -81,8 +80,35 @@
         width: 150px;
         height: 200px;
     }
-}
 
+    .header-box nav ul li a {
+        font-size: 24px;
+    }
+
+    .header-box nav ul li i {
+        font-size: 24px;
+    }
+
+    .main-section2 h3 {
+        font-size: 22px;
+    }
+
+    .main-section2 article p {
+        font-size: 22px;
+    }
+
+    .main-section2 i {
+        font-size: 22px;
+    }
+
+    .main-section3 h3{
+        font-size: 20px;    
+    }
+
+    .main-section3 p{
+        font-size: 20px;    
+    }
+}
 
 /*------------------------*/
 
@@ -252,11 +278,12 @@
 
 .productosRecomendados_imagenes {
     display: flex;
-    align-items: center;
+    justify-content: center;
     margin-top: 10px;
 }
 .productosRecomendados_imagenes img {
     width: 30%;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {
