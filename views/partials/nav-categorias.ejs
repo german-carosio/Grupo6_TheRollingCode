@@ -5,7 +5,7 @@
     <ul>
         <li><a href="/productList ">Todos</a></li>
         <% categorias.forEach(element => { %>
-            <li><a href="/categorias/<%= element %> "><%= element %></a></li>
+            <li><a href="/categorias/<%= element.toLowerCase() %> "><%= element %></a></li>
         <% }) %>
     </ul>
 
