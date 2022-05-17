@@ -27,7 +27,7 @@ let ProductsController = {
     },
 
     administrador:(req,res) => {
-     res.render("administrador");
+     res.render("administrador", {productos: productos});
 },
     productCart: (req,res) => {
     res.render("productCart");

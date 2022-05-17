@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <!--Head-->
+   <%- include ("./partials/head")  %> 
+
+   <body>
+
+   <!--Header-->    
+   <%- include ("./partials/header")  %>
+
+   
+    <main>
+        <section class="formulario">
+
+            <h2>Creacion y modificación de productos</h2>
+
+            <article class="crear-producto">
+
+                
+
+                <form action="">
+                    <label class="label" for="crear-producto">Crear Producto</label>
+                    <input type="text" name="id" name="id" required placeholder="id">
+                    <input type="text" name="nombre" name="nombre" required placeholder="Nombre">
+                    <input type="text" name="marca" name="marca" required placeholder="Marca">
+                    <input type="text" name="precio" name="precio" required placeholder="Precio">
+                    <input type="text" name="detalle" name="detalle" required placeholder="Detalle">
+                    <input type="text" name="categoria" name="categoria" required placeholder="Categoria">
+                    <input type="file" name="imagen" name="foto" required accept=".jpg, .png">
+                    <button class="bottom-login" type="submit">CREAR</button>  
+                </form>
+
+            </article>
+            
+            <article class="modificar-producto">
+
+                
+            </article>
+
+        </section>
+
+    </main>
+    
+    <!--Footer-->
+    <%- include ("./partials/footer")  %> 
+    
+</body>
+</html>
