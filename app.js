@@ -2,6 +2,8 @@
 const express = require ('express');
 //importar el router
 const mainRouter = require ('./routes/main');
+const usersRouter = require ('./routes/users');
+const productsRouter = require ('./routes/products');
 
 const app = express();
 const port = 3000;
@@ -16,6 +18,8 @@ app.set("view engine", "ejs");
 
 //usar los get del router
 app.use("/", mainRouter);
+app.use("/users", usersRouter);
+app.use("/products", productsRouter);
 
 //levantar servidor 
 app.listen(process.env.PORT || port, () => {
