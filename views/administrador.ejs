@@ -21,6 +21,8 @@
 
             <h2>Administrador: Lista de productos</h2>
 
+            <a href="/productos/administrador/crear">Crear nuevo producto</a>
+
             <% productos.forEach(element => { %>
              
                 <article class="productList__product">
@@ -36,8 +38,9 @@
                     <p><%= element.precio  %> </p>
 
                     <div>
-                        <button class="buttom-update" type="submit">MODIFICAR</button>
-                        <button class="buttom-delete" type="submit">BORRAR</button>   
+                        <i class="fa-solid fa-trash-can"></i>
+                        <br>
+                        <i class="fa-solid fa-pen"></i>
                     </div>
                 
                 </article>
