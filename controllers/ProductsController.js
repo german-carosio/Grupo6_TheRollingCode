@@ -3,7 +3,10 @@ const fs = require('fs');
 const productos = JSON.parse(fs.readFileSync('./productos.json'))
 
 //categorias
+
 const categorias = ["Headset", "Mouse", "Teclado"];
+
+let carrito = [];
 
 let ProductsController = {
    
@@ -26,12 +29,16 @@ let ProductsController = {
          res.render("categorias",{categoria:categoria,categorias: categorias});
     },
 
-    administrador:(req,res) => {
+     administrador:(req,res) => {
      res.render("administrador", {productos: productos});
 },
+
+     crear:(req,res) => {
+     res.render("crear");
+},
     productCart: (req,res) => {
-    res.render("productCart");
-    }
+     res.render("productCart",{carrito: carrito});
+     }
 }
 
 

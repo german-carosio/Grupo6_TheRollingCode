@@ -14,6 +14,7 @@ router.get("/productCart", ProductsController.productCart);
 
 //administrador
 router.get("/administrador", ProductsController.administrador);
+router.get("/crear", ProductsController.crear);
 
 
 
