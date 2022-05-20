@@ -52,22 +52,26 @@ let ProductsController = {
      res.render("productCreate", {productos:productos});
 },
      productSave:(req,res) => {
+     let ultimoProd = productos.length - 1
+     let nuevoId = productos[ultimoProd].id + 1
 
-     productoNuevo = {
-          id: req.body.id,
+     let productoNuevo = {
+          id: nuevoId,
           marca: req.body.marca,
           modelo:req.body.modelo,
           precio: req.body.precio,
           detalle: req.body.detalle,
           categoria:req.body.categoria,
-          img: req.body.img
+          img: req.file.filename
+          
      };
+     console.log(productoNuevo);
 
      productos.push(productoNuevo);
 
-     console.log(productos);
+     
 
-     const productosJsonRead = JSON.stringify(productos);
+     const productosJsonRead = JSON.stringify(productos, null, "\t");
      fs.writeFileSync('./productos.json', productosJsonRead);
 
      res.redirect("administrador");

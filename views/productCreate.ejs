@@ -19,8 +19,8 @@
 
                 
 
-                <form action="/products/productCreate " method="POST" enctype="multipart/form-data">
-                    <input type="text" name="id" id="id" required placeholder="ID">
+                <form action="/products/productCreate " method="POST" enctype="multipart/form-data" >
+   
                     <input type="text" name="marca" id="marca" required placeholder="Marca">
                     <input type="text" name="modelo" id="modelo" required placeholder="Modelo">
                     <input type="text" name="precio" id="precio" required placeholder="Precio">
@@ -31,8 +31,7 @@
                         <option value="mouse">Mouse</option>
                         <option value="teclado">Teclado</option>
                     </select>
-                    <input type="text" name="img" id="img" required placeholder="imagen">
-                    <!--<input type="file" name="img" id="img" required accept=".jpg, .png">-->
+                    <input type="file" name="img" id="img" required accept=".jpg, .png">
                     <button class="bottom-login" type="submit">CREAR</button>  
                 </form>
 

@@ -324,11 +324,16 @@
     margin-right: auto;
     width: 90%;
     padding: 50px 0 50px 10px;
+    text-align: center;
     
 }
 
 .formulario h2 {
     margin-bottom: 20px;
+}
+
+.formulario img {
+    width: 40%;
 }
 
 .formulario form {
@@ -375,6 +380,9 @@
     margin-top: 10px;
     font-size: 14px;
 }
+
+
+
 
 @media (min-width: 768px) {
     

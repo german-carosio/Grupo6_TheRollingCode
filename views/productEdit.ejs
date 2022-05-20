@@ -18,19 +18,17 @@
             <article class="editar-producto">
 
                 
-
+                <p>ID de producto: <%= productoEdit.id %> </p>
+                <img src="/img/<%= productoEdit.img %>" alt="">    
                 <form action="/products/productEdit/?_method=PUT " method="POST">
-                    <p>ID de producto: <%= productoEdit.id %> </p>
+                
                     <input value="<%= productoEdit.marca %>" type="text" name="marca" id="marca" required placeholder="Marca" >
                     <input value="<%= productoEdit.modelo %>" type="text" name="modelo" id="modelo" required placeholder="Modelo" >
                     <input value="<%= productoEdit.precio %>" type="text" name="precio" id="precio" required placeholder="Precio">
                     <textarea  name="detalle" id="detalle" required placeholder="Detalle de producto"><%= productoEdit.detalle %></textarea>
-                    <input value="<%= productoEdit.categoria %>" type="text" name="categoria" id="categoria" required placeholder="Precio">
-                    <!--<input value="<%= productoEdit.categoria %>" type="text" name="categoria" id="categoria" required placeholder="Categoria">-->
-                    <input value="<%= productoEdit.img %>" type="text" name="img" id="img" required placeholder="Imagen">
-            
-                    <!--<input type="file" name="img" id="img" required accept=".jpg, .png">-->
-                    <button class="bottom-login" type="submit">CREAR</button>  
+                    <input value="<%= productoEdit.categoria %>" type="text" name="categoria" id="categoria" required placeholder="Precio">           
+                    <input type="file" name="img" id="img" required accept=".jpg, .png">
+                    <button class="bottom-login" type="submit">MODIFICAR</button>  
                 </form>
 
             </article>
