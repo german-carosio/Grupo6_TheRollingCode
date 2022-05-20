@@ -348,6 +348,18 @@
     width: 100%;
 }
 
+.formulario form textarea {
+    padding: 5px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.formulario form select {
+    padding: 5px;
+    margin-top: 15px;
+    width: 100%;
+}
+
 .formulario form button {
     padding: 5px;
     margin-top: 15px;

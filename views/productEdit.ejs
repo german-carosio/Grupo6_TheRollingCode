@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <!--Head-->
+   <%- include ("./partials/head")  %> 
+
+   <body>
+
+   <!--Header-->    
+   <%- include ("./partials/header")  %>
+
+   
+    <main>
+        <section class="formulario">
+
+            <h2>Edición de productos</h2>
+
+            <article class="editar-producto">
+
+                
+
+                <form action="/products/productEdit/?_method=PUT " method="POST">
+                    <p>ID de producto: <%= productoEdit.id %> </p>
+                    <input value="<%= productoEdit.marca %>" type="text" name="marca" id="marca" required placeholder="Marca" >
+                    <input value="<%= productoEdit.modelo %>" type="text" name="modelo" id="modelo" required placeholder="Modelo" >
+                    <input value="<%= productoEdit.precio %>" type="text" name="precio" id="precio" required placeholder="Precio">
+                    <textarea  name="detalle" id="detalle" required placeholder="Detalle de producto"><%= productoEdit.detalle %></textarea>
+                    <input value="<%= productoEdit.categoria %>" type="text" name="categoria" id="categoria" required placeholder="Precio">
+                    <!--<input value="<%= productoEdit.categoria %>" type="text" name="categoria" id="categoria" required placeholder="Categoria">-->
+                    <input value="<%= productoEdit.img %>" type="text" name="img" id="img" required placeholder="Imagen">
+            
+                    <!--<input type="file" name="img" id="img" required accept=".jpg, .png">-->
+                    <button class="bottom-login" type="submit">CREAR</button>  
+                </form>
+
+            </article>
+            
+            <article class="modificar-producto">
+
+                
+            </article>
+
+        </section>
+
+    </main>
+    
+    <!--Footer-->
+    <%- include ("./partials/footer")  %> 
+    
+</body>
+</html>

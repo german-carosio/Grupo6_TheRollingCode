@@ -17,3 +17,6 @@ media querys
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) { ... }
+
+//formulario
+https://www.w3schools.com/howto/howto_js_form_steps.asp

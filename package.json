@@ -21,6 +21,7 @@
     "ejs": "^3.1.7",
     "express": "^4.18.1",
     "method-override": "^3.0.0",
+    "multer": "^1.4.4",
     "nodemon": "^2.0.16"
   },
   "description": "Se trata de un Marketplace, que tiene como objetivo la venta de auriculares para gamers. Será un solo tipo de producto pero con diversos modelos del mismo producto.\r Público / Target : Fanáticos de los videojuegos, una audiencia  compuesta casi por completo por miembros de la generación Z. Este será nuestro target primario, aunque en los últimos años, el universo del público abocado a los videojuegos se ubica entre los 15 y 35 años."
