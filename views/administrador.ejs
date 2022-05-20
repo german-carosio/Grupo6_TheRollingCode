@@ -38,8 +38,8 @@
                     <p><%= element.precio  %> </p>
 
                     <div>
-                        <form action="/products/administrador/<%= element.id %>?_method=DELETE " method="post">
-                        <i class="fa-solid fa-trash-can"></i>
+                        <form action="/products/delete/<%= element.id %>?_method=DELETE" method="post">
+                            <button type="submit"><i class="fa-solid fa-trash-can"></i></button></button>
                         </form>
                         <br>
                         

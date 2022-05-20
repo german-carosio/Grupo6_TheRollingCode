@@ -37,6 +37,7 @@ router.get("/productCreate", ProductsController.productCreate);
 router.post("/productCreate", upload.single("img"), ProductsController.productSave);
 //Editar productos
 router.get("/productEdit/:id", ProductsController.productEdit);
+router.put("/productEdit/:id", upload.single("img"), ProductsController.productUpdate);
 //Borrar productos
 router.delete("/delete/:id", ProductsController.productDelete);
 

@@ -19,15 +19,22 @@
 
                 
                 <p>ID de producto: <%= productoEdit.id %> </p>
-                <img src="/img/<%= productoEdit.img %>" alt="">    
-                <form action="/products/productEdit/?_method=PUT " method="POST">
+
+                <img src="/img/<%= productoEdit.img %>" alt="">   
+
+                <form action="/products/productEdit/<%= productoEdit.id %>?_method=PUT " method="POST" enctype="multipart/form-data">
                 
                     <input value="<%= productoEdit.marca %>" type="text" name="marca" id="marca" required placeholder="Marca" >
                     <input value="<%= productoEdit.modelo %>" type="text" name="modelo" id="modelo" required placeholder="Modelo" >
                     <input value="<%= productoEdit.precio %>" type="text" name="precio" id="precio" required placeholder="Precio">
-                    <textarea  name="detalle" id="detalle" required placeholder="Detalle de producto"><%= productoEdit.detalle %></textarea>
-                    <input value="<%= productoEdit.categoria %>" type="text" name="categoria" id="categoria" required placeholder="Precio">           
-                    <input type="file" name="img" id="img" required accept=".jpg, .png">
+                    <textarea name="detalle" id="detalle" required placeholder="Detalle de producto"><%= productoEdit.detalle %></textarea>           
+                    <select  name="categoria" id="categoria">
+                        <option value="">Categoria</option>
+                        <option value="headset" <%= productoEdit.categoria === "headset" ? "selected" : "" %> >Headset</option>
+                        <option value="mouse" <%= productoEdit.categoria === "mouse" ? "selected" : "" %>>Mouse</option>
+                        <option value="teclado" <%= productoEdit.categoria === "teclado" ? "selected" : "" %>>Teclado</option>
+                    </select>
+                    <input value="<%= productoEdit.img %>"type="file" name="img" id="img" accept=".jpg, .png">
                     <button class="bottom-login" type="submit">MODIFICAR</button>  
                 </form>
 
