@@ -1,46 +1,47 @@
 const fs = require('fs');
 const path = require('path');
 
-//leer json y crear un array en js
+let productos;
 
+//Funcion para leer JSON
+function leerJson() {
+     const productosJsonRead = fs.readFileSync(path.join(__dirname, '../productos.json'),{encoding:'utf-8'})
+     
+     if (productosJsonRead == "") {
+     productos = [];
+     }else {
+     productos = JSON.parse(productosJsonRead);
+     }
+     return productos
+}
 
-
+//Función para escribir JSON 
+function escribirJson() {
+const productosJsonWrite = JSON.stringify(productos, null, "\t");
+fs.writeFileSync(path.join(__dirname, '../productos.json'), productosJsonWrite);
+}
 
 //categorias
 const categorias = ["Headset", "Mouse", "Teclado"];
 
-//array de carrito
-let carrito = [];
+
 
 let ProductsController = {
    
 //listar productos 
     productList: (req,res) => {
-     const productosJsonRead = fs.readFileSync(path.join(__dirname, '../productos.json'),{encoding:'utf-8'});
-     let productos;
-
-if (productosJsonRead == "") {
-     productos = [];
-}else {
-     productos = JSON.parse(productosJsonRead);
-}
-
+     
+     leerJson();
 
      res.render("productList",{productos: productos, categorias: categorias});
      },
 
 //detalle de producto
     productDetail: (req,res) => {
-     const productosJsonRead = fs.readFileSync(path.join(__dirname, '../productos.json'),{encoding:'utf-8'});
-     let productos;
-     
-     if (productosJsonRead == "") {
-          productos = [];
-     }else {
-          productos = JSON.parse(productosJsonRead);
-     }
 
-         const producto = productos.find(element =>{
+          leerJson();
+
+          const producto = productos.find(element =>{
                return element.id === parseInt(req.params.id)
           })
          res.render("productDetail",{producto: producto});
@@ -48,14 +49,8 @@ if (productosJsonRead == "") {
 
 //dividir en categorias
     categorias: (req,res) => {  
-     const productosJsonRead = fs.readFileSync(path.join(__dirname, '../productos.json'),{encoding:'utf-8'});
-let productos;
-
-if (productosJsonRead == "") {
-     productos = [];
-}else {
-     productos = JSON.parse(productosJsonRead);
-}
+     
+     leerJson();
 
      const categoria = productos.filter(element =>{
           return element.categoria === req.params.categoria
@@ -65,44 +60,31 @@ if (productosJsonRead == "") {
 
 //administrador
      administrador:(req,res) => {
-          const productosJsonRead = fs.readFileSync(path.join(__dirname, '../productos.json'),{encoding:'utf-8'});
-          let productos;
-          
-          if (productosJsonRead == "") {
-               productos = [];
-          }else {
-               productos = JSON.parse(productosJsonRead);
-          }
+
+          leerJson();
 
      res.render("administrador", {productos: productos});
 },
 
 //crear producto
      productCreate:(req,res) => {
-          const productosJsonRead = fs.readFileSync(path.join(__dirname, '../productos.json'),{encoding:'utf-8'});
-let productos;
-
-if (productosJsonRead == "") {
-     productos = [];
-}else {
-     productos = JSON.parse(productosJsonRead);
-}
+     
+     leerJson();
           
      res.render("productCreate", {productos:productos});
 },
      productSave:(req,res) => {
-          const productosJsonRead = fs.readFileSync(path.join(__dirname, '../productos.json'),{encoding:'utf-8'});
-let productos;
 
-if (productosJsonRead == "") {
-     productos = [];
-}else {
-     productos = JSON.parse(productosJsonRead);
-}
+          leerJson();
 
+          let nuevoId
+          if (productos = []) {
+               nuevoId = 1;
+          }else{
           let ultimoProd = productos.length - 1;
-          let nuevoId = productos[ultimoProd].id + 1;
-     
+          nuevoId = productos[ultimoProd].id + 1;
+          }
+
      let productoNuevo = {
           id: nuevoId,
           marca: req.body.marca,
@@ -117,45 +99,31 @@ if (productosJsonRead == "") {
 
      productos.push(productoNuevo);
 
-     
-
-     const productosJsonWrite = JSON.stringify(productos, null, "\t");
-     fs.writeFileSync('./productos.json', productosJsonWrite);
+     escribirJson();
 
      res.redirect("administrador");
 },
 
 //Editar producto 
      productEdit:(req,res) => {
-          const productosJsonRead = fs.readFileSync(path.join(__dirname, '../productos.json'),{encoding:'utf-8'});
-let productos;
 
-if (productosJsonRead == "") {
-     productos = [];
-}else {
-     productos = JSON.parse(productosJsonRead);
-}
+          leerJson();
 
-     const producto = productos.find(element =>{
-     return element.id === parseInt(req.params.id)
-     })
-     res.render("productEdit",{productoEdit: producto});
+          const producto = productos.find(element =>{
+          return element.id === parseInt(req.params.id)
+          })
+
+          res.render("productEdit",{productoEdit: producto});
 },
 
      //Editar producto 
      productUpdate:(req,res) => {
-          const productosJsonRead = fs.readFileSync(path.join(__dirname, '../productos.json'),{encoding:'utf-8'});
-let productos;
 
-if (productosJsonRead == "") {
-     productos = [];
-}else {
-     productos = JSON.parse(productosJsonRead);
-}
+          leerJson();
            
-
           productos.forEach(element => {
-          let oldImage = req.file ?  req.file.filename : element.img;
+          
+               let oldImage = req.file ?  req.file.filename : element.img;
                
                if (element.id === parseInt(req.params.id)) {
                     element.marca = req.body.marca;
@@ -168,26 +136,16 @@ if (productosJsonRead == "") {
                
           });
           
-          console.log(productos);
-          const productosJsonWrite = JSON.stringify(productos, null, "\t");
-          fs.writeFileSync('./productos.json', productosJsonWrite);
+
+          escribirJson();
 
           res.redirect("/products/administrador");
      },
 
 //Eliminar producto 
      productDelete:(req,res) => {
-          const productosJsonRead = fs.readFileSync(path.join(__dirname, '../productos.json'),{encoding:'utf-8'});
-          let productos;
-          
-          if (productosJsonRead == "") {
-               productos = [];
-          }else {
-               productos = JSON.parse(productosJsonRead);
-               //console.log(productosJsonRead);
-          }
 
-          console.log(req.params);
+          leerJson();
 
           const eliminar = productos.filter(element =>{
               return element.id !== parseInt(req.params.id)
@@ -195,15 +153,15 @@ if (productosJsonRead == "") {
 
           productos = eliminar;
 
-          const productosJsonWrite = JSON.stringify(productos, null, "\t");
-          fs.writeFileSync(path.join(__dirname, '../productos.json'), productosJsonWrite);
+
+          escribirJson();
 
           res.redirect("/products/administrador");
 },
 
 //carrito de compras
     productCart: (req,res) => {
-
+          //No implementado
      res.render("productCart",{carrito: carrito});
 }
 

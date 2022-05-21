@@ -76,19 +76,7 @@
 }
 
 @media (min-width: 1024px) {
-    .header-box img {
-        width: 150px;
-        height: 200px;
-    }
-
-    .header-box nav ul li a {
-        font-size: 24px;
-    }
-
-    .header-box nav ul li i {
-        font-size: 24px;
-    }
-
+    
     .main-section2 h3 {
         font-size: 22px;
     }
@@ -169,7 +157,9 @@
     text-decoration: none;
 }
 
+
 .productList__product {
+    width: 100%;
     border: solid var(--lila) 2px;
     margin-top: 10px;
     padding: 20px;
@@ -179,10 +169,12 @@
     align-items: center;
 }
 
-.productList__product button {
+
+
+.productList button {
     border: solid var(--lila) 1px;
     padding: 5px;
-    margin: 2px ;
+    margin: 5px ;
 }
 
 .productList__product p {
@@ -194,13 +186,32 @@
     width: 50vw;
 }
 
-.productList__product div {
+.productList__product .buttonsBuy-productos {
     display: flex;
     flex-direction: column;
 }
 
-.productList__product a {
-    text-decoration: none;
+
+/*botones crud productos*/
+
+.buttonCreate-product {
+    text-align: center;
+}
+.buttonsCrud-products {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px; 
+    
+}
+.buttonDelete-product, .buttonEdit-product {
+    height: 50px;
+    width: 50px;
+}
+.buttonDelete-product, .buttonEdit-product i {
+    font-size: 15px;
 }
 
 @media (min-width: 768px) {

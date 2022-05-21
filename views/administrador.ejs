@@ -20,8 +20,9 @@
         <section class="productList">
 
             <h2>Administrador: Lista de productos</h2>
-
-            <a href="/products/productCreate">Crear nuevo producto</a>
+            <div class="buttonCreate-product">
+            <button><a href="/products/productCreate">CREAR PRODUCTO</a></button>
+            </div>
 
             <% productos.forEach(element => { %>
              
@@ -37,17 +38,15 @@
                    
                     <p><%= element.precio  %> </p>
 
-                    <div>
-                        <form action="/products/delete/<%= element.id %>?_method=DELETE" method="post">
-                            <button type="submit"><i class="fa-solid fa-trash-can"></i></button></button>
-                        </form>
-                        <br>
-                        
+                    <div class="buttonsCrud-products">
                         <a href="/products/productEdit/<%= element.id %> ">
-                            <i class="fa-solid fa-pen"></i>
+                            <button class="buttonEdit-product"><i class="fa-solid fa-pen"></i></button>
                         </a>
+
+                        <form action="/products/delete/<%= element.id %>?_method=DELETE" method="post">
+                            <button class="buttonDelete-product" type="submit"><i class="fa-solid fa-trash-can"></i></button>
+                        </form>
                     </div>
-                
                 </article>
 
             <% }) %>
