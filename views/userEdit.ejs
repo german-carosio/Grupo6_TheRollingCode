@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--Head-->
+    <%- include ("./partials/head")  %> 
+    
+    <body>
+
+    <!--Header-->    
+    <%- include ("./partials/header")  %>
+
+    <main>
+        <section class="formulario">
+
+            <h2>Edicion de Usuario</h2>
+            
+            <form action="/users/userEdit/<%= userEdit.id %>?_method=PUT" method="POST">
+
+                <input value="<%= userEdit.nombre %>" type="text" name="nombre" id="nombre" required placeholder="Nombre">
+                <input value="<%= userEdit.apellido %>" type="text" name="apellido" id="apellido" required placeholder="Apellido">
+                <input value="<%= userEdit.documento %>" type="number" name="documento" id="documento" required placeholder="Documento">
+                <input value="<%= userEdit.telefono %>" type="number" name="telefono" id="telefono" required placeholder="Telefono">
+                <input value="<%= userEdit.email %>" type="email" name="email" id="email" required placeholder="Email">
+                <input value="<%= userEdit.password %>" type="password" name="password" id="password" required placeholder="Paswword">
+                
+                <br>
+     
+                <button class="button-register" type="submit">CREAR USUARIO</button>
+            </form>
+        </section>    
+
+    </main>
+
+    <!--Footer-->
+    <%- include ("./partials/footer")  %> 
+    
+</body>
+</html>

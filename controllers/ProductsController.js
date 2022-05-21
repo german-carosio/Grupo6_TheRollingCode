@@ -5,9 +5,9 @@ let productos;
 
 //Funcion para leer JSON
 function leerJson() {
-     const productosJsonRead = fs.readFileSync(path.join(__dirname, '../productos.json'),{encoding:'utf-8'})
+     const productosJsonRead = fs.readFileSync(path.join(__dirname, '../database/productos.json'),{encoding:'utf-8'})
      
-     if (productosJsonRead == "") {
+     if (productosJsonRead === "") {
      productos = [];
      }else {
      productos = JSON.parse(productosJsonRead);
@@ -18,7 +18,7 @@ function leerJson() {
 //Función para escribir JSON 
 function escribirJson() {
 const productosJsonWrite = JSON.stringify(productos, null, "\t");
-fs.writeFileSync(path.join(__dirname, '../productos.json'), productosJsonWrite);
+fs.writeFileSync(path.join(__dirname, '../database/productos.json'), productosJsonWrite);
 }
 
 //categorias
@@ -76,14 +76,10 @@ let ProductsController = {
      productSave:(req,res) => {
 
           leerJson();
-
-          let nuevoId
-          if (productos = []) {
-               nuevoId = 1;
-          }else{
-          let ultimoProd = productos.length - 1;
-          nuevoId = productos[ultimoProd].id + 1;
-          }
+          
+          let ultimoProd = productos.length -1;
+          let nuevoId = productos[ultimoProd].id + 1
+          
 
      let productoNuevo = {
           id: nuevoId,
@@ -95,7 +91,7 @@ let ProductsController = {
           img: req.file.filename
           
      };
-     console.log(productoNuevo);
+     
 
      productos.push(productoNuevo);
 

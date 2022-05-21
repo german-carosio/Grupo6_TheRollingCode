@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const productos = JSON.parse(fs.readFileSync('./productos.json'))
+const productos = JSON.parse(fs.readFileSync('./database/productos.json'))
 
 //categorias
 const categorias = ["Headset", "Mouse", "Teclado"];
