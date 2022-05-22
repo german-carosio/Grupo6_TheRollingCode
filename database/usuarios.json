@@ -16,5 +16,14 @@
 		"telefono": "1165448877",
 		"email": "joselopez@gmail.com",
 		"password": "123456"
+	},
+	{
+		"id": 3,
+		"nombre": "Pia Soledad",
+		"apellido": "La Regina",
+		"documento": "25456565",
+		"telefono": "01143701270",
+		"email": "juan_meirino@artear.com",
+		"password": "lkhkjhkjh"
 	}
 ]

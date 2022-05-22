@@ -158,7 +158,7 @@ let ProductsController = {
 //carrito de compras
     productCart: (req,res) => {
           //No implementado
-     res.render("productCart",{carrito: carrito});
+
 }
 
 }

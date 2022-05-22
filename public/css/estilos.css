@@ -1,5 +1,8 @@
 
 /*INDEX*/
+header-box.li fa-solid fa-user {
+    display: none;
+}
 
 .main-section article img {
     width: 100%;
@@ -76,7 +79,7 @@
 }
 
 @media (min-width: 1024px) {
-    
+
     .main-section2 h3 {
         font-size: 22px;
     }
