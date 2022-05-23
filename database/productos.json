@@ -52,14 +52,5 @@
 		"detalle": "Adaptado a tus movimientosEl mouse gamer te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla.",
 		"categoria": "mouse",
 		"img": "mouse1.jpg"
-	},
-	{
-		"id": 7,
-		"marca": "Daihatsu",
-		"modelo": "Led RGB",
-		"precio": "$ 3.500",
-		"detalle": "Auricular vincha gammer",
-		"categoria": "headset",
-		"img": "1653172973592.jpg"
 	}
 ]

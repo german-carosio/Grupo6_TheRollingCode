@@ -15,7 +15,7 @@
         
         <section>
 
-            <h2>Lista de usuarios</h2>
+            <h2>Administrador: Lista de usuarios</h2>
 
             <div class="buttonCreate-product">
                 <button><a href="/users/register">CREAR USUARIO</a></button>
@@ -25,6 +25,9 @@
              
                 <article class="usersList">
 
+                    <div class="img-usersList">
+                        <img src="/img/imgUsers/<%= element.img ? element.img : "default.png" %> " alt="">
+                    </div>
                     <div class="datosUsuario">
                         <p>id: <%= element.id %> </p>
                         <p>Nombre: <%= element.nombre %> </p>

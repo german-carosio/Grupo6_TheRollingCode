@@ -17,23 +17,22 @@ function leerJson() {
 
 //Función para escribir JSON 
 function escribirJson() {
-const productosJsonWrite = JSON.stringify(productos, null, "\t");
-fs.writeFileSync(path.join(__dirname, '../database/productos.json'), productosJsonWrite);
+     const productosJsonWrite = JSON.stringify(productos, null, "\t");
+     fs.writeFileSync(path.join(__dirname, '../database/productos.json'), productosJsonWrite);
 }
 
 //categorias
 const categorias = ["Headset", "Mouse", "Teclado"];
 
-
-
+//OBJETO CONTROLADOR PRODUCTOS
 let ProductsController = {
    
 //listar productos 
-    productList: (req,res) => {
+     productList: (req,res) => {
      
-     leerJson();
+          leerJson();
 
-     res.render("productList",{productos: productos, categorias: categorias});
+          res.render("productList",{productos: productos, categorias: categorias});
      },
 
 //detalle de producto
@@ -48,23 +47,24 @@ let ProductsController = {
      },
 
 //dividir en categorias
-    categorias: (req,res) => {  
+     categorias: (req,res) => {  
      
-     leerJson();
+          leerJson();
 
-     const categoria = productos.filter(element =>{
-          return element.categoria === req.params.categoria
-     })
+          const categoria = productos.filter(element =>{
+               return element.categoria === req.params.categoria
+          })
+
          res.render("categorias",{categoria:categoria,categorias: categorias});
-    },
+     },
 
 //administrador
-     administrador:(req,res) => {
+     productListAdm:(req,res) => {
 
           leerJson();
 
-     res.render("administrador", {productos: productos});
-},
+          res.render("productListAdm", {productos: productos});
+     },
 
 //crear producto
      productCreate:(req,res) => {
@@ -74,31 +74,38 @@ let ProductsController = {
      res.render("productCreate", {productos:productos});
 },
      productSave:(req,res) => {
+          //if que valida si hay archivo de imagen
+          if (req.file) {
+          
+               leerJson();
+          
+          
+               let ultimoProd = productos.length -1;
+               let nuevoId = productos[ultimoProd].id + 1     
 
-          leerJson();
-          
-          let ultimoProd = productos.length -1;
-          let nuevoId = productos[ultimoProd].id + 1
-          
+               let productoNuevo = {
 
-     let productoNuevo = {
-          id: nuevoId,
-          marca: req.body.marca,
-          modelo:req.body.modelo,
-          precio: req.body.precio,
-          detalle: req.body.detalle,
-          categoria:req.body.categoria,
-          img: req.file.filename
+                    id: nuevoId,
+                    marca: req.body.marca,
+                    modelo:req.body.modelo,
+                    precio: req.body.precio,
+                    detalle: req.body.detalle,
+                    categoria:req.body.categoria,
+                    img: req.file.filename
           
-     };
+               };
      
 
-     productos.push(productoNuevo);
+               productos.push(productoNuevo);
 
-     escribirJson();
+               escribirJson();
 
-     res.redirect("administrador");
-},
+               res.redirect("productListAdm");
+
+          }else {
+               res.render("productCreate", {productos:productos});
+          }
+     },
 
 //Editar producto 
      productEdit:(req,res) => {
@@ -110,7 +117,7 @@ let ProductsController = {
           })
 
           res.render("productEdit",{productoEdit: producto});
-},
+     },
 
      //Editar producto 
      productUpdate:(req,res) => {
@@ -119,7 +126,7 @@ let ProductsController = {
            
           productos.forEach(element => {
           
-               let oldImage = req.file ?  req.file.filename : element.img;
+               let imgEdit = req.file ?  req.file.filename : element.img;
                
                if (element.id === parseInt(req.params.id)) {
                     element.marca = req.body.marca;
@@ -127,7 +134,7 @@ let ProductsController = {
                     element.precio = req.body.precio;
                     element.detalle = req.body.detalle;
                     element.categoria = req.body.categoria;
-                    element.img = oldImage ;
+                    element.img = imgEdit ;
                }
                
           });
@@ -135,7 +142,7 @@ let ProductsController = {
 
           escribirJson();
 
-          res.redirect("/products/administrador");
+          res.redirect("/products/productListAdm");
      },
 
 //Eliminar producto 
@@ -152,14 +159,14 @@ let ProductsController = {
 
           escribirJson();
 
-          res.redirect("/products/administrador");
-},
+          res.redirect("/products/productListAdm");
+     },
 
 //carrito de compras
-    productCart: (req,res) => {
+     productCart: (req,res) => {
           //No implementado
-
-}
+          res.render("productCart");
+     }
 
 }
 

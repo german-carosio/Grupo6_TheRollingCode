@@ -423,6 +423,7 @@ header-box.li fa-solid fa-user {
 
 /*USUARIOS*/
 
+
 .usersList {
     border: solid var(--lila) 1px;
     padding: 20px;
@@ -432,6 +433,14 @@ header-box.li fa-solid fa-user {
     align-items: center;
     margin: 5px;
 
+}
+
+.img-usersList {
+    width: 30vw;
+}
+
+.img-usersList img {
+    width: 100%;
 }
 
 .botonesCrud-usuarios {
@@ -455,9 +464,27 @@ header-box.li fa-solid fa-user {
         flex-direction: row;
     }
 
+    .img-usersList img {
+        width: 50%;
+    }
     .botonesCrud-usuarios {
         flex-direction: column;
         
     }
     
+}
+
+/*---------------------------*/
+
+/*ADMINISTRADOR*/
+
+.section-administrador div {
+    display: flex;
+    justify-content: center;
+}
+
+.section-administrador div button {
+   padding: 10px;
+   margin: 10px;
+   border: solid var(--lila) 1px;
 }

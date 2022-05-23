@@ -1,16 +1,18 @@
 const fs = require('fs');
 
-const productos = JSON.parse(fs.readFileSync('./database/productos.json'))
 
-//categorias
-const categorias = ["Headset", "Mouse", "Teclado"];
 
 let MainController = {
    
     index: (req,res) => {
+        const productos = JSON.parse(fs.readFileSync('./database/productos.json'))
          res.render("index",{productos: productos});
-    }
+    },
 
+    administrador: (req,res) => {
+
+        res.render("administrador");
+   }
     
 }
 

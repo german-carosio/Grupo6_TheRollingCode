@@ -7,7 +7,7 @@ const MainController = require ("../controllers/MainController")
 
 //crear las rutas para "/..."  (app.get)
 router.get("/", MainController.index);
-
+router.get("/administrador", MainController.administrador);
 
 
 //exportar el router

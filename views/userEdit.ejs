@@ -14,7 +14,7 @@
 
             <h2>Edicion de Usuario</h2>
             
-            <form action="/users/userEdit/<%= userEdit.id %>?_method=PUT" method="POST">
+            <form action="/users/userEdit/<%= userEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                 <input value="<%= userEdit.nombre %>" type="text" name="nombre" id="nombre" required placeholder="Nombre">
                 <input value="<%= userEdit.apellido %>" type="text" name="apellido" id="apellido" required placeholder="Apellido">
@@ -22,10 +22,11 @@
                 <input value="<%= userEdit.telefono %>" type="number" name="telefono" id="telefono" required placeholder="Telefono">
                 <input value="<%= userEdit.email %>" type="email" name="email" id="email" required placeholder="Email">
                 <input value="<%= userEdit.password %>" type="password" name="password" id="password" required placeholder="Paswword">
-                
                 <br>
-     
-                <button class="button-register" type="submit">CREAR USUARIO</button>
+                <label for="file">Imagen de Usuario</label>
+                <input type="file" name="img" id="img"  accept=".jpg, .png">
+                <br>
+                <button class="button-register" type="submit">MODIFICAR USUARIO</button>
             </form>
         </section>    
 

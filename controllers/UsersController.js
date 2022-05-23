@@ -25,11 +25,11 @@ fs.writeFileSync(path.join(__dirname, '../database/usuarios.json'), usersJsonWri
 
 let UsersController = {
    
-    index: (req,res) => {
+     usersList: (req,res) => {
           
          leerJson()
 
-         res.render("users", {usuarios : usuarios});
+         res.render("usersList", {usuarios : usuarios});
     },
 
 
@@ -44,8 +44,10 @@ let UsersController = {
     },
 
     userSave: (req,res) => {
-
-     leerJson();
+     //if que valida si hay archivo de imagen
+     if (req.file) {
+          
+          leerJson();
          
           let ultimoUser = usuarios.length -1;
           let nuevoId = usuarios[ultimoUser].id + 1;
@@ -58,7 +60,8 @@ let UsersController = {
 		documento: req.body.documento,
 		telefono: req.body.telefono,
 		email: req.body.email,
-		password: req.body.password         
+		password: req.body.password,
+          img: req.file.filename         
      };
 
      usuarios.push(usuarioNuevo);
@@ -67,7 +70,12 @@ let UsersController = {
 
      escribirJson();
 
-     res.redirect("/users");
+     res.redirect("/");
+
+     }else {
+          res.render("register");
+     }
+
 },
 //Editar usuario 
      userEdit:(req,res) => {
@@ -91,13 +99,16 @@ let UsersController = {
                
                
                if (element.id === parseInt(req.params.id)) {
-               
+                    
+                    let imgEdit = req.file ?  req.file.filename : element.img;
+
                     element.nombre = req.body.nombre;
                     element.apellido = req.body.apellido;
                     element.documento = req.body.documento;
                     element.telefono = req.body.telefono;
                     element.email = req.body.email ;
                     element.password = req.body.password;
+                    element.img = imgEdit;
                }
                
           });

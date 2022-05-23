@@ -14,7 +14,7 @@
 
             <h2>Registro</h2>
             
-            <form action="/users/register" method="POST">
+            <form action="/users/register" method="POST" enctype="multipart/form-data">
 
                 <input type="text" name="nombre" id="nombre" required placeholder="Nombre">
                 <input type="text" name="apellido" id="apellido" required placeholder="Apellido">
@@ -22,7 +22,9 @@
                 <input type="number" name="telefono" id="telefono" required placeholder="Telefono">
                 <input type="email" name="email" id="email" required placeholder="Email">
                 <input type="password" name="password" id="password" required placeholder="Paswword">
-                
+                <br>
+                <label for="file">Imagen de Usuario</label>
+                <input type="file" name="img" id="img"  accept=".jpg, .png">
                 <br>
      
                 <button class="button-register" type="submit">CREAR USUARIO</button>
