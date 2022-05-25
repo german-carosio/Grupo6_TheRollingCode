@@ -25,5 +25,15 @@
 		"telefono": "01143701270",
 		"email": "juan_meirino@artear.com",
 		"password": "lkhkjhkjh"
+	},
+	{
+		"id": 4,
+		"nombre": "Joaquin",
+		"apellido": "Meirino",
+		"documento": "51676812",
+		"telefono": "01143701270",
+		"email": "joaco@gmail.com",
+		"password": "12345678",
+		"img": "1653440330647.jpg"
 	}
 ]

@@ -14,21 +14,20 @@
 
         <section class="detail-main">
 
-            <h2>Detalle de Producto:</h2>
-
             <article>
         
                 <div>
                     <img src="/img/imgProducts/<%= producto.img %> " alt="">
                 </div>
                 <div>
-                    <button class="buttom-carrito" type="submit">AGREGAR AL CARRITO</button>
                     <button class="buttom-carrito" type="submit">COMPRAR</button>   
                 </div>
-                <h3><%= producto.marca %> </h3> 
-                <p><%= producto.modelo %> </p>
-                <p><%= producto.precio %> </p>
+                <div>    
+                <h4><%= producto.marca %> </h4> 
+                <h5><%= producto.modelo %> </h5>
+                <h3><%= producto.precio %> </h3>
                 <p><%= producto.detalle %> </p>
+                </div>
             </article>
             </article>
 
